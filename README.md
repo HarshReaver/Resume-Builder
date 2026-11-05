@@ -2,11 +2,13 @@
 
 A single-page app: fill in a form and watch a clean A4 resume build itself. Everything runs in your browser. Nothing is uploaded; your data stays on your device.
 
+**Try it online:** https://harshreaver.github.io/Resume-Builder/
+
 ## How to run
 
 No install, no build step, no internet needed.
 
-1. Open the folder and double-click `index.html` (Chrome or Edge recommended; Firefox and Safari also work).
+1. Download this repo (on GitHub: Code > Download ZIP), unzip it and double-click `index.html` (Chrome or Edge recommended; Firefox and Safari also work).
 2. To use it like an app, bookmark the page, or in Chrome/Edge choose "Install page as app" from the menu if offered.
 
 Files: `index.html` (page), `style.css` (app and 3 templates and print rules), `app.js` (logic), `sample.js` (fake demo data).
@@ -39,3 +41,8 @@ Also try: refresh the page after typing (autosave brings your data back), and op
 - Autosave is per browser and per computer. Use Save data (.json) to move a resume to another device or to keep a backup.
 - Dragging with the mouse works on desktop; touch screens do not support dragging, so use the Move up / Move down buttons there.
 - The page count under the preview is an estimate; the print preview shows the exact result.
+
+## Tested
+
+- The sample resume printed to PDF (A4, 595 x 842 pt) in all 3 templates: each is exactly 2 pages, no job, project or degree is split, and the PDF text can be selected and copied.
+- Changed the template to Timeline and moved a section, saved the .json, clicked Clear all, loaded the file: every field, the section order and the template came back.
