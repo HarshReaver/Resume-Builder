@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Resume Builder</h1>
+      <p class="sub">Your data stays on this device and is saved automatically in this browser.</p>
+    </div>
+    <div class="actions">
+      <label class="tpl">Template
+        <select id="template">
+          <option value="classic">Classic (serif, centered)</option>
+          <option value="modern">Modern (color header, chips)</option>
+          <option value="timeline">Timeline (dates in left column)</option>
+        </select>
+      </label>
+      <button type="button" class="btn" id="sampleBtn">Load sample</button>
+      <button type="button" class="btn" id="clearBtn">Clear all</button>
+      <button type="button" class="btn" id="saveBtn">Save data (.json)</button>
+      <button type="button" class="btn" id="loadBtn">Load data (.json)</button>
+      <input type="file" id="file" accept=".json,application/json" hidden>
+      <button type="button" class="btn primary" id="printBtn">Print / Save as PDF</button>
+    </div>
+    <p id="status" class="status" role="status"></p>
+  </header>
+
+  <main class="layout">
+    <form id="form" class="editor" autocomplete="off" onsubmit="return false"></form>
+    <section class="preview" id="pane" aria-label="Resume preview">
+      <p id="pages" class="pages"></p>
+      <article id="paper" class="paper"></article>
+    </section>
+  </main>
+
+  <script src="sample.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
